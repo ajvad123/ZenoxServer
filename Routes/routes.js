@@ -3,17 +3,20 @@ const userController = require('../Controllers/userControler'); // Make sure thi
 const studentDetails=require('../Controllers/userDetails')
 const getStudents=require('../Controllers/userDetails')
 const getContact=require('../Controllers/userControler')
+const SoftwareEnq=require('../Controllers/softControler')
 const router = express.Router();
 
 
 
 
-router.post('/contactUs', userController.contactDetails);
+router.post('/contactUs', userController.contactDetails); 
 router.post('/students', studentDetails.studentDetails);
 router.get('/getContact', getContact.getStudentContact);
 router.get('/getDetails', getStudents.getDetails);
+router.post('/softEnq',SoftwareEnq.softwareEnquiries)
 
 
+ 
 
 
 
