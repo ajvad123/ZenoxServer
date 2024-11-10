@@ -4,6 +4,7 @@ const studentDetails=require('../Controllers/userDetails')
 const getStudents=require('../Controllers/userDetails')
 const getContact=require('../Controllers/userControler')
 const SoftwareEnq=require('../Controllers/softControler')
+const getSoftEnq=require('../Controllers/softControler')
 const router = express.Router();
 
 
@@ -14,6 +15,8 @@ router.post('/students', studentDetails.studentDetails);
 router.get('/getContact', getContact.getStudentContact);
 router.get('/getDetails', getStudents.getDetails);
 router.post('/softEnq',SoftwareEnq.softwareEnquiries)
+router.get('/getSoftEnq',getSoftEnq.getSoftEnq );
+
 
 
  

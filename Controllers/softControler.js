@@ -30,3 +30,20 @@ exports.softwareEnquiries = async (req, res) => {
 
 
 }
+
+exports.getSoftEnq=async(req,res)=>{
+
+    try{
+
+    const result = await Softwares.find()
+
+    if (result) {
+        res.status(200).json(result)
+
+    }else{
+        res.status(404).json("No Enquiries available")
+    }
+} catch(err){
+    res.status(406).json(err)
+}
+}
