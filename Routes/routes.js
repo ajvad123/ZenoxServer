@@ -16,7 +16,7 @@ router.get('/getContact', getContact.getStudentContact);
 router.get('/getDetails', getStudents.getDetails);
 router.post('/softEnq',SoftwareEnq.softwareEnquiries)
 router.get('/getSoftEnq',getSoftEnq.getSoftEnq );
-
+router.delete('/getSoftEnq/:id', getSoftEnq.deleteSoftEnq);
 
 
  
